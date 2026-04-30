@@ -1,0 +1,68 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:15-alpine
+    container_name: autoone-postgres
+    environment:
+      POSTGRES_USER: autoone_user
+      POSTGRES_PASSWORD: autoone_pass_dev
+      POSTGRES_DB: autoone_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - autoone-network
+
+  redis:
+    image: redis:7-alpine
+    container_name: autoone-redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    networks:
+      - autoone-network
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: autoone-backend
+    environment:
+      NODE_ENV: development
+      DATABASE_URL: postgresql://autoone_user:autoone_pass_dev@postgres:5432/autoone_db
+      REDIS_URL: redis://redis:6379
+      JWT_SECRET: dev_secret_key_change_in_production
+      STRIPE_SECRET_KEY: ${STRIPE_SECRET_KEY}
+      STRIPE_PUBLISHABLE_KEY: ${STRIPE_PUBLISHABLE_KEY}
+    ports:
+      - "3001:3001"
+    depends_on:
+      - postgres
+      - redis
+    networks:
+      - autoone-network
+    command: npm run start:dev
+
+  nginx:
+    image: nginx:alpine
+    container_name: autoone-nginx
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+    depends_on:
+      - backend
+    networks:
+      - autoone-network
+
+volumes:
+  postgres_data:
+  redis_data:
+
+networks:
+  autoone-network:
+    driver: bridge

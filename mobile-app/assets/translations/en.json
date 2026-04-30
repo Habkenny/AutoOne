@@ -1,0 +1,35 @@
+{
+  "en": {
+    "app_name": "AutoOne",
+    "workshops": "Workshops",
+    "car_wash": "Car Wash",
+    "bookings": "My Bookings",
+    "about": "About",
+    "login": "Login",
+    "browse_services": "Browse Services",
+    "car_maintenance": "Book nearby workshops for repairs and maintenance",
+    "on_demand": "On-demand car wash services at your convenience"
+  },
+  "ar": {
+    "app_name": "أوتو وان",
+    "workshops": "ورش العمل",
+    "car_wash": "غسيل السيارات",
+    "bookings": "حجوزاتي",
+    "about": "عن",
+    "login": "تسجيل الدخول",
+    "browse_services": "استعرض الخدمات",
+    "car_maintenance": "احجز ورش عمل قريبة للإصلاحات والصيانة",
+    "on_demand": "خدمات غسيل سيارات عند الطلب"
+  },
+  "de": {
+    "app_name": "AutoOne",
+    "workshops": "Werkstätten",
+    "car_wash": "Autowäsche",
+    "bookings": "Meine Buchungen",
+    "about": "Über",
+    "login": "Anmelden",
+    "browse_services": "Dienstleistungen durchsuchen",
+    "car_maintenance": "Buchen Sie nahegelegene Werkstätten für Reparaturen und Wartung",
+    "on_demand": "On-Demand-Autowäschedienste"
+  }
+}

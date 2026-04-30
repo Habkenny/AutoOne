@@ -1,0 +1,59 @@
+name: autoone_mobile
+description: AutoOne - Multi-language digital platform for car services
+
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # State Management
+  riverpod: ^2.3.0
+  flutter_riverpod: ^2.3.0
+
+  # HTTP & API
+  dio: ^5.2.0
+  retrofit: ^4.0.0
+  
+  # Localization
+  easy_localization: ^6.3.0
+  
+  # UI & Navigation
+  go_router: ^9.0.0
+  google_maps_flutter: ^2.4.0
+  
+  # Payments
+  flutter_stripe: ^7.0.0
+  
+  # Auth & Storage
+  flutter_secure_storage: ^9.0.0
+  shared_preferences: ^2.2.0
+  
+  # Date & Time
+  intl: ^0.18.0
+  
+  # Others
+  logger: ^2.0.0
+  uuid: ^3.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^2.0.0
+  retrofit_generator: ^4.0.0
+  build_runner: ^2.3.0
+
+flutter:
+  uses-material-design: true
+  generate: true
+
+  assets:
+    - assets/translations/
+    - assets/images/
+    - assets/icons/

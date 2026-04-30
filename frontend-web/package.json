@@ -1,0 +1,41 @@
+{
+  "name": "autoone-web",
+  "version": "1.0.0",
+  "description": "AutoOne Web Frontend",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "export": "next export"
+  },
+  "dependencies": {
+    "next": "^14.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "axios": "^1.5.0",
+    "react-i18next": "^13.2.0",
+    "i18next": "^23.5.0",
+    "i18next-browser-languagedetector": "^7.1.0",
+    "i18next-http-backend": "^2.4.1",
+    "tailwindcss": "^3.3.0",
+    "next-auth": "^4.23.0",
+    "stripe": "^12.18.0",
+    "@stripe/react-stripe-js": "^2.1.0",
+    "@stripe/stripe-js": "^1.46.0",
+    "leaflet": "^1.9.4",
+    "react-leaflet": "^4.2.1",
+    "zustand": "^4.4.0",
+    "date-fns": "^2.30.0",
+    "socket.io-client": "^4.7.2"
+  },
+  "devDependencies": {
+    "eslint": "^8.49.0",
+    "eslint-config-next": "^14.0.0",
+    "typescript": "^5.2.0",
+    "@types/react": "^18.2.21",
+    "@types/node": "^20.5.0",
+    "autoprefixer": "^10.4.15",
+    "postcss": "^8.4.29"
+  }
+}

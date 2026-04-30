@@ -1,0 +1,32 @@
+{
+  "name": "autoone",
+  "version": "1.0.0",
+  "description": "AutoOne - Multi-language digital platform for car services in the Middle East",
+  "private": true,
+  "workspaces": [
+    "backend",
+    "frontend-web",
+    "shared"
+  ],
+  "scripts": {
+    "install:all": "npm install",
+    "dev": "npm run dev --workspaces",
+    "build": "npm run build --workspaces",
+    "test": "npm run test --workspaces",
+    "lint": "npm run lint --workspaces",
+    "dev:backend": "npm run dev -w backend",
+    "dev:web": "npm run dev -w frontend-web",
+    "docker:up": "docker-compose up",
+    "docker:down": "docker-compose down"
+  },
+  "keywords": [
+    "automotive",
+    "car-services",
+    "middle-east",
+    "workshop",
+    "car-rental",
+    "car-import"
+  ],
+  "author": "AutoOne Team",
+  "license": "MIT"
+}

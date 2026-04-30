@@ -1,0 +1,13 @@
+{
+  "name": "autoone-shared",
+  "version": "1.0.0",
+  "description": "Shared types and utilities for AutoOne",
+  "main": "index.ts",
+  "scripts": {
+    "build": "tsc"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "typescript": "^5.2.0"
+  }
+}
