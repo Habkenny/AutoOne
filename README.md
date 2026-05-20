@@ -111,7 +111,7 @@ docker-compose up
 6. **Deployment** - Setup CI/CD pipelines, cloud hosting
 7. **Analytics** - Add user behavior tracking and analytics
 
-## Contributing
+## Contributiion
 Follow the established patterns in each module for consistency.
 
 ## License
